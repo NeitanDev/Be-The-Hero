@@ -1,6 +1,6 @@
 # Anotações da Aula:
 
--Rota / Recursos
+-[Rota / Recursos]
 
 -Metodos HTTP:
     -GET: Buscar uma informações do back-end
