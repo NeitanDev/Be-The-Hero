@@ -3,9 +3,13 @@
 > Rota / Recursos
 
 > Metodos HTTP:
+
     - GET: Buscar uma informações do back-end
+
     - POST: Criar uma informação do back-end
+
     - PUT: Alterar uma infmação do back-end
+
     - DELETE: Deleta uma informação do back-end
 
 > Tipos de Parametros:
