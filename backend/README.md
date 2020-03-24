@@ -2,7 +2,7 @@
 
  -> Rota / Recursos
 
-->Metodos HTTP:
+*Metodos HTTP:
     GET: Buscar uma informações do back-end
     POST: Criar uma informação do back-end
     PUT: Alterar uma infmação do back-end
