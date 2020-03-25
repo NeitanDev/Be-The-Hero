@@ -26,6 +26,6 @@ module.exports = {
     }
 }
 /**Metodos e funções:
- * index: lista todos as ings cadastradas no banco;
+ * index: lista todos as ongs cadastradas no banco;
  * create: cria novos registros de ongs e retorna id da ong que acabou de se cadastrar
  */
