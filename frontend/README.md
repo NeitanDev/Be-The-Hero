@@ -1,68 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Anotações sobre a aula
 
-## Available Scripts
+Aqui vai ter os conteudos relevantes e teoricos e exemplos que não vão permanecer na aplicação final
 
-In the project directory, you can run:
+### `Propriedades`
 
-### `yarn start`
+- codigo do app.js:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+import React from 'react';
+import Header from './Header';
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+function App() {
+  return (
+    <Header sounou="Sounou"/>
+  );
+}
 
-### `yarn test`
+export default App;
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- codigo do header.js:
 
-### `yarn build`
+import React from 'react';
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function Header(props) {
+    return (
+        <header>
+            <h1>{props.sounou}</h1>
+        </header>
+    );
+}
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+export default Header;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Propriedade por Herança`
 
-### `yarn eject`
+- codigo do app.js:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+import React from 'react';
+import Header from './Header';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+  return (
+    <Header>
+        Title
+    </Header>
+  );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- codigo do header.js:
 
-## Learn More
+import React from 'react';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function Header(props) {
+    return (
+        <header>
+            <h1>{props.children}</h1>
+        </header>
+    );
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Estado e Imutabilidade`
 
-### Code Splitting
+o estado é uma variavel que vc não edida seu valor diretamente, mas atraves de um metodo como mostra no codigo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- codigo do app.js:
 
-### Analyzing the Bundle Size
+import React, { useState } from 'react';
+import Header from './Header';
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+function App() {
+  const [counter, setCouter] = useState(0);
 
-### Making a Progressive Web App
+  //Array [valor, funçãoDeAtualizarValor]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+  function incriment() {
+    setCouter(counter + 1);
+  }
 
-### Advanced Configuration
+  return (
+    <div>
+      <Header>Sounuo: {counter}</Header>
+      <button onClick={incriment}>Incrementar</button>
+    </div>
+  );
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+export default App;
