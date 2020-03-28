@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         color: '#737380',
     },
     incident: {
-        marginTop: 48,
+        marginTop: 24,
         padding: 24,
         borderRadius: 10,
         backgroundColor: '#FFF',
