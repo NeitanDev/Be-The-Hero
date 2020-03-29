@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "Be The Hero",
     "slug": "mobile",
     "privacy": "public",
     "sdkVersion": "36.0.0",
@@ -24,7 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.semanaomnistack.bethehero",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.semanaomnistack.bethehero",
+      "versionCode": 1
     }
   }
 }
